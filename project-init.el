@@ -4,8 +4,6 @@
 ;; aimed at providing recipies and skeletons for projects.
 ;;; Code:
 
-(require 'cl-lib)
-
 (require 'project-init-utils)
 (require 'project-init-common)
 (require 'project-init-skeletons)

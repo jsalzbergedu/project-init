@@ -9,6 +9,7 @@
 ;; predicates to differentiate peices of the project structure
 (require 'project-init-utils)
 (require 'project-init-settings)
+(eval-when-compile (require 'cl-lib))
 
 ;; Functions for navigating the layout structure:
 (defun project-init--layout-get-dirname (layout)

@@ -3,7 +3,7 @@
 ;; Provides convenience functions for project-init.
 ;;; Code:
 (require 'f)
-(require 'cl-lib)
+(require 'dash)
 
 (defvar project-init-use-encoding 'utf-8-unix "Which encoding to use.")
 
@@ -20,9 +20,9 @@
 (defun project-init--expand-file-names (dir-or-file &rest dirs-or-files)
   "Expand beginning at DIR-OR-FILE and ending at the last DIRS-OR-FILES.
 Like this: expand a b c d = a/b/c/d"
-  (cl-reduce (lambda (a b) (expand-file-name b a))
-             dirs-or-files
-             :initial-value dir-or-file))
+  (-reduce-from (lambda (a b) (expand-file-name b a))
+                dir-or-file
+                dirs-or-files))
 
 (defun project-init--write-maybe (filename s)
   "Add a file at FILENAME containing S if FILENAME does not exist."
