@@ -1,4 +1,4 @@
-;; project-init-common.el --- common to all projects -*- lexical-binding t -*-
+;;; project-init-common.el --- common to all projects -*- lexical-binding: t -*-
 ;;; Commentary:
 ;; Provides a structure and recipie for projects.
 ;; This is an Emacs oriented structure, and assumes you already
